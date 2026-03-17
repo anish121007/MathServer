@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <tittle></tittle>
+    </head>
+    <style>
+          body
+          {
+            background:linear-gradient(45deg,cyan,rgb(35, 222, 232));
+            margin: 10;
+          }  
+          .head
+          {
+            gap:40;
+            position: fixed;
+            bottom:10%;
+            left:35%;
+            border: dashed 4px red;
+            border-radius: 20px;
+            background: rgb(163, 226, 36);
+            padding:100;
+          }
+          input
+         {
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 20px;
+         }
+         .form
+         {
+            border-radius: 10px;
+            width:10px;
+         }
+         .submit
+         {
+            color:black;
+            background-color: white;
+         }
+          
+    </style>
+    <body>
+        <center>
+            <div class="head">
+                <h1>Price Calculator</h1>
+                <h2>ANISH KB (25019112)</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                <label>PRICE:</label>
+                <input type="text" name="price" value="{{Price}}">
+                <br>
+                <br>
+                <label>GST:</label>
+                <input type="text" name="GST" value="{{GST}}">
+                <br>
+                <br>
+                <input type="submit" value="Calculate">
+                <br>
+                <br>
+                <label>TOTAL:</label>
+                <input type="text" value="{{Total}}">
+                </form>
+                </div>
+            </center>
+        </body>
+</html>
